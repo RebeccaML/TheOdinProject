@@ -9,13 +9,13 @@ function createGrid(size) {
     grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
     for (let i = 0; i < size * size; i++) {
-        let div = document.createElement('div');
+        let div = document.createElement("div");
         div.classList.add("gridBox");
         grid.appendChild(div);
     }
     gridBoxes = document.querySelectorAll(".gridBox");
     gridBoxes.forEach((gridBox) => {
-        gridBox.addEventListener('mouseover', (e) => {
+        gridBox.addEventListener("mouseover", (e) => {
             gridBox.classList.add("active");
         });
     });
@@ -27,7 +27,7 @@ reset.addEventListener('click', (e) => {
     });
 });
 
-changeSize.addEventListener('click', (e) => {
+changeSize.addEventListener("click", (e) => {
     gridBoxes.forEach((gridBox) => {
         gridBox.classList.remove("active");
     });
